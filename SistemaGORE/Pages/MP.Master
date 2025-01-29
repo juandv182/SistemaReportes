@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="SistemaGORE.Pages.MP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item">
+                Inicio
+              </a>
+
+              <a class="navbar-item">
+                Reportes
+              </a>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Opciones
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    Usuarios
+                  </a>
+                  <a class="navbar-item is-selected">
+                    Roles
+                  </a>
+                  <a class="navbar-item">
+                    Permisos
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    Otro
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar-end has-text-centered navbar-brand">
+
+             <div runat="server" id="divuser" class="navbar-item has-dropdown is-hoverable">
+                  <asp:Label CssClass="navbar-link" runat="server" ID="lblusuario"></asp:Label>
+                  <div class="navbar-dropdown">
+                       <asp:Button text="Salir" runat="server" CssClass="button is-white" OnClick="Unnamed_Click2"/>
+                  </div>
+              </div>
+              <div class="navbar-item" runat="server" id="divbuttons">
+
+                <div class="buttons">                  
+                    <asp:Button text="Registrarse" runat="server" CssClass="button is-primary" OnClick="Unnamed_Click"/>
+                    <asp:Button text="Iniciar sesión" runat="server" CssClass="button is-light" OnClick="Unnamed_Click1"/>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </nav>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Gilat Perú
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
