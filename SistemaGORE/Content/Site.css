@@ -1,5 +1,7 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
+    background-color: #f8f9fa !important; /* Color claro */
+    color: #333 !important; /* Texto oscuro */
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -28,4 +30,18 @@ textarea {
     .body-content {
         padding: 0;
     }
+}
+
+.navbar {
+    background-color: #ffffff !important; /* Navbar claro */
+    border-bottom: 1px solid #ddd;
+}
+
+.footer {
+    background-color: #ffffff !important;
+    color: #333;
+}
+
+.button {
+    color: white !important;
 }
